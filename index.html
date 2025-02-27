@@ -6,6 +6,20 @@
     <title>Welcome to Book Bridge</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+        // Add Firebase auth state listener
+        import { auth } from './firebase-config.js';
+        
+        auth.onAuthStateChanged((user) => {
+            if (user) {
+                console.log('User is logged in:', user.email);
+                // Optional: Redirect logged-in users to dashboard
+                // window.location.href = 'dashboard.html';
+            } else {
+                console.log('No user logged in');
+            }
+        });
+    </script>
 </head>
 <body class="bg-gradient-to-r from-blue-50 to-purple-50 text-gray-900">
     <header class="bg-purple-600 p-4 text-white flex justify-between items-center shadow-lg sticky top-0 z-50">
