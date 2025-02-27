@@ -1,0 +1,23 @@
+{
+  "name": "book-bridge",
+  "version": "1.0.0",
+  "main": "firebase-config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "dev": "npm run build"
+  },
+  "keywords": ["books", "student", "exchange"],
+  "author": "",
+  "license": "ISC",
+  "description": "A platform for students to buy, sell, and donate books",
+  "dependencies": {
+    "firebase": "^10.4.0",
+    "tailwindcss": "^3.3.3",
+    "postcss": "^8.4.31",
+    "autoprefixer": "^10.4.16"
+  },
+  "devDependencies": {
+    "postcss-cli": "^10.1.0"
+  }
+}
